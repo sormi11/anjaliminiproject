@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sormimini/orderpage.dart';
 
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -13,13 +12,13 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Stack(
         children: [
-          // Image.asset(
-          //   "assets/images/loginbg.jpg",
-          //   fit: BoxFit.cover,
-          //   height: MediaQuery.of(context).size.height,
-          // ),
+          Image.asset(
+            "assets/images/vegbg.jpeg",
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height,
+          ),
           Opacity(
-            opacity: 0.7,
+            opacity: 0.6,
             child: Container(
               color: Colors.black,
             ),
@@ -28,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
             child: Container(
               margin: EdgeInsets.all(30),
               child: Card(
-               // color: ThemeColors.themeGrey,
+                // color: ThemeColors.themeGrey,
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Column(
@@ -38,13 +37,13 @@ class _LoginPageState extends State<LoginPage> {
                         alignment: Alignment.bottomLeft,
                         child: Text(
                           "Username",
-                          style: TextStyle(fontSize: 15, color: Colors.grey),
+                          style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Container(
                         decoration: BoxDecoration(
-                        //    color: ThemeColors.themeLightGrey,
+                            //    color: ThemeColors.themeLightGrey,
                             borderRadius: BorderRadius.circular(10)),
                         child: TextField(
                           decoration: InputDecoration(
@@ -59,13 +58,13 @@ class _LoginPageState extends State<LoginPage> {
                         alignment: Alignment.bottomLeft,
                         child: Text(
                           "Password",
-                          style: TextStyle(fontSize: 15, color: Colors.grey),
+                          style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
                       ),
                       Padding(padding: EdgeInsets.all(5)),
                       Container(
                         decoration: BoxDecoration(
-                         //   color: ThemeColors.themeLightGrey,
+                            //   color: ThemeColors.themeLightGrey,
                             borderRadius: BorderRadius.circular(10)),
                         child: TextField(
                           obscureText: true,
@@ -83,9 +82,8 @@ class _LoginPageState extends State<LoginPage> {
                               borderRadius: BorderRadius.circular(10)),
                           child: ElevatedButton(
                             style: ButtonStyle(
-                              // backgroundColor: MaterialStateProperty.all<Color>(
-                              //    ThemeColors.themeRed
-                              //   ),
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.green),
                             ),
                             onPressed: () {
                               //TODO: add login logic
@@ -95,7 +93,10 @@ class _LoginPageState extends State<LoginPage> {
                                     builder: (context) => Orderpage(),
                                   ));
                             },
-                            child: Text("LOGIN"),
+                            child: Text(
+                              "LOGIN",
+                              //  style: TextStyle(color: Colors.green),
+                            ),
                           )),
                     ],
                   ),

@@ -98,7 +98,7 @@ class _OrderpageState extends State<Orderpage>
                         //   "assets/Photo.jpeg",
                         // ),
                         title: const Text(
-                          'Anjali Gangera',
+                          'Siddhant Mehta',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: const Text('Delhi NCR'),
@@ -139,11 +139,34 @@ class _OrderpageState extends State<Orderpage>
                             ),
                             Expanded(
                               child: OutlinedButton(
-                                onPressed: () {
-                                  setState(() {
-                                    
-                                  });
-                                },
+                                onPressed: () => showDialog<String>(
+                                  context: context,
+                                  builder: (BuildContext context) =>
+                                      AlertDialog(
+                                    title: const Text(
+                                      'You have accepted the order!',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    content: const Icon(
+                                      Icons.verified,
+                                      size: 100,
+                                      color: Colors.green,
+                                      // fill: 0.0,
+                                    ),
+                                    actions: <Widget>[
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(context, 'Cancel'),
+                                        child: const Text('Cancel'),
+                                      ),
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.pop(context, 'OK'),
+                                        child: const Text('OK'),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                                 child: const Text('Accept',
                                     style: TextStyle(color: Colors.white)),
                                 style: ButtonStyle(

@@ -3,7 +3,6 @@ import 'package:sormimini/loginpage.dart';
 
 import 'orderpage.dart';
 
-
 class Profilepage extends StatefulWidget {
   const Profilepage({Key? key}) : super(key: key);
 
@@ -12,8 +11,6 @@ class Profilepage extends StatefulWidget {
 }
 
 class _ProfilepageState extends State<Profilepage> {
-  @override
-
   final _textFieldController = TextEditingController();
 
   Widget build(BuildContext context) {
@@ -45,9 +42,9 @@ class _ProfilepageState extends State<Profilepage> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     ListTile(
-                      leading: Image.asset('assets/images/anjali.jpg'),
-                      title: const Text('Anjali Gangera'),
-                      subtitle: const Text('anjaligangera@gmail.com'),
+                      // leading: Image.asset('assets/images/anjali.jpg'),
+                      title: const Text('Siddhant Mehta'),
+                      subtitle: const Text('siddhantmehta02@gmail.com'),
                     ),
                   ],
                 ),
@@ -58,22 +55,22 @@ class _ProfilepageState extends State<Profilepage> {
                 title: const Text('My information'),
                 trailing: IconButton(
                     onPressed: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          title: const Text('Anjali Gangera'),
-          content: const Text('Mobile No. : +91 6351220597'),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Back'),
-              child: const Text('Cancel'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'OK'),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      ),
+                          context: context,
+                          builder: (BuildContext context) => AlertDialog(
+                            title: const Text('Siddhant Mehta'),
+                            content: const Text('Mobile No. : +91 7016203781'),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () => Navigator.pop(context, 'Back'),
+                                child: const Text('Cancel'),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(context, 'OK'),
+                                child: const Text('OK'),
+                              ),
+                            ],
+                          ),
+                        ),
                     icon: const Icon(Icons.arrow_forward_ios)),
               ),
             ),
@@ -82,32 +79,29 @@ class _ProfilepageState extends State<Profilepage> {
                 title: const Text('Change Password'),
                 trailing: IconButton(
                     onPressed: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          title: const Text('Set new Password'),
-          content: TextField(
-            onChanged: (value) {
-     
-            },
-            controller: _textFieldController,
-            decoration: InputDecoration(hintText: "Password"),
-            obscureText: true,
-            enableSuggestions: false,
-            autocorrect: false,
-          ),
-
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Back'),
-              child: const Text('Back'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'OK'),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      ),
+                          context: context,
+                          builder: (BuildContext context) => AlertDialog(
+                            title: const Text('Set new Password'),
+                            content: TextField(
+                              onChanged: (value) {},
+                              controller: _textFieldController,
+                              decoration: InputDecoration(hintText: "Password"),
+                              obscureText: true,
+                              enableSuggestions: false,
+                              autocorrect: false,
+                            ),
+                            actions: <Widget>[
+                              TextButton(
+                                onPressed: () => Navigator.pop(context, 'Back'),
+                                child: const Text('Back'),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.pop(context, 'OK'),
+                                child: const Text('OK'),
+                              ),
+                            ],
+                          ),
+                        ),
                     icon: const Icon(Icons.arrow_forward_ios)),
               ),
             ),
@@ -116,8 +110,10 @@ class _ProfilepageState extends State<Profilepage> {
               children: [
                 Expanded(
                   child: OutlinedButton.icon(
-                    onPressed: () { Navigator.push(context,
-                MaterialPageRoute(builder: (context) =>  LoginPage()));},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => LoginPage()));
+                    },
                     icon: const Icon(
                       Icons.logout,
                       color: Colors.white,
@@ -140,5 +136,3 @@ class _ProfilepageState extends State<Profilepage> {
     );
   }
 }
-
-

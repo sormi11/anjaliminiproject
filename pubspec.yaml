@@ -62,6 +62,7 @@ flutter:
   assets:
      - assets/images/anjali qrcode.jpg
      - assets/images/anjali.jpg
+     - assets/images/vegbg.jpeg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

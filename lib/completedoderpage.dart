@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'additem.dart';
-
 class Completedoderpage extends StatefulWidget {
   const Completedoderpage({super.key});
 
@@ -12,7 +10,7 @@ class Completedoderpage extends StatefulWidget {
 class _CompletedoderpageState extends State<Completedoderpage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
@@ -38,7 +36,7 @@ class _CompletedoderpageState extends State<Completedoderpage> {
                     //   "assets/Photo.jpeg",
                     // ),
                     title: const Text(
-                      'Sormi Gohil',
+                      'Siddhant Mehta',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text('Delhi NCR'),
@@ -88,7 +86,7 @@ class _CompletedoderpageState extends State<Completedoderpage> {
                     //   "assets/Photo.jpeg",
                     // ),
                     title: const Text(
-                      'Anjali Gangera',
+                      'Abish Mathew',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text('Delhi NCR'),

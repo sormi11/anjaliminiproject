@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'additem.dart';
-
-
 class Inprogress extends StatefulWidget {
   const Inprogress({Key? key}) : super(key: key);
 
@@ -39,7 +36,7 @@ class _InprogressState extends State<Inprogress> {
                     //   "assets/Photo.jpeg",
                     // ),
                     title: const Text(
-                      'Sormi Gohil',
+                      'Siddhant Mehta',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text('Delhi NCR'),
@@ -48,22 +45,25 @@ class _InprogressState extends State<Inprogress> {
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green)),
                         onPressed: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          title: const Text('Pay to this QR code'),
-          content: Image.asset('assets/images/anjali qrcode.jpg'),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Cancel'),
-              child: const Text('Cancel'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'OK'),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      ),
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Pay to this QR code'),
+                                content: Image.asset(
+                                    'assets/images/anjali qrcode.jpg'),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(context, 'Cancel'),
+                                    child: const Text('Cancel'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(context, 'OK'),
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            ),
                         child: const Text(
                           '₹450',
                           style: TextStyle(color: Colors.white),
@@ -105,7 +105,7 @@ class _InprogressState extends State<Inprogress> {
                     //   "assets/Photo.jpeg",
                     // ),
                     title: const Text(
-                      'Anjali Gangera',
+                      'Abish Mathew',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     subtitle: const Text('Delhi NCR'),
@@ -113,25 +113,28 @@ class _InprogressState extends State<Inprogress> {
                         style: ButtonStyle(
                             backgroundColor:
                                 MaterialStateProperty.all<Color>(Colors.green)),
-                       onPressed: () => showDialog<String>(
-        context: context,
-        builder: (BuildContext context) => AlertDialog(
-          title: const Text('Pay to this QR code'),
-          content: Image.asset('assets/images/anjali qrcode.jpg'),
-          actions: <Widget>[
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'Cancel'),
-              child: const Text('Cancel'),
-            ),
-            TextButton(
-              onPressed: () => Navigator.pop(context, 'OK'),
-              child: const Text('OK'),
-            ),
-          ],
-        ),
-      ),
+                        onPressed: () => showDialog<String>(
+                              context: context,
+                              builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Pay to this QR code'),
+                                content: Image.asset(
+                                    'assets/images/anjali qrcode.jpg'),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(context, 'Cancel'),
+                                    child: const Text('Cancel'),
+                                  ),
+                                  TextButton(
+                                    onPressed: () =>
+                                        Navigator.pop(context, 'OK'),
+                                    child: const Text('OK'),
+                                  ),
+                                ],
+                              ),
+                            ),
                         child: const Text(
-                          '₹450',
+                          '₹470',
                           style: TextStyle(color: Colors.white),
                         )),
                   ),
