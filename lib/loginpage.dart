@@ -1,13 +1,19 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:sormimini/inprogresspage.dart';
 import 'package:sormimini/orderpage.dart';
+import 'package:sormimini/user.dart';
 
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
 }
-
+final _Passcontroler = TextEditingController();
 class _LoginPageState extends State<LoginPage> {
   @override
+    
+    
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
@@ -86,7 +92,20 @@ class _LoginPageState extends State<LoginPage> {
                                   Colors.green),
                             ),
                             onPressed: () {
-                              //TODO: add login logic
+                              if(_Passcontroler.text == '12345678'){
+      // wrong call in wrong place!
+      Navigator.pushReplacement(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Userpage(),
+                                  ));
+}
+                          
+    else{
+    showDialog(context: context,  builder: (BuildContext context) => AlertDialog(
+                                title: const Text('Invalid Password che loda!!'),));
+  
+  }
                               Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(

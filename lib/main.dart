@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:sormimini/cartpage.dart';
+import 'package:sormimini/loginpage.dart';
+import 'package:sormimini/registerpage.dart';
+import 'package:sormimini/user.dart';
 
 import 'orderpage.dart';
 
@@ -26,7 +30,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const Orderpage(),
+      home: Userpage(),
     );
   }
 }

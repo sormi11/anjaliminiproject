@@ -29,3 +29,18 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+plugins {
+  id 'com.android.application'
+
+  // Add the Google services Gradle plugin
+  id 'com.google.gms.google-services'
+
+}
+
+dependencies {
+
+  implementation platform('com.google.firebase:firebase-bom:32.0.0')
+
+  implementation 'com.google.firebase:firebase-analytics-ktx'
+
+}

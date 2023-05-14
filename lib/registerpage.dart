@@ -14,7 +14,7 @@ class RegisterState extends State<Register> {
       body: Stack(
         children: [
           Image.asset(
-            "assets/images/loginbg.jpg",
+            "assets/images/vegbg.jpeg",
             fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
           ),
@@ -164,6 +164,8 @@ class RegisterState extends State<Register> {
                               borderRadius: BorderRadius.circular(10)),
                           child: ElevatedButton(
                             style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all<Color>(
+                                  Colors.green),
                             //   backgroundColor: MaterialStateProperty.all<Color>(
                             //       ThemeColors.themeRed),
                              ),
